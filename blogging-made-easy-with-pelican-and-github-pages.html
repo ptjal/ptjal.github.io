@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/theme/font-awesome/css/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="Tylor Allison" />
+<meta name="description" content="Overview This post serves as a quick tutorial on setting up a web site using statically generated pages using Pelican for static site management, Markdown for page authoring, and GitHub Pages for hosting. These are all steps that I have used already to set up this site. The intent is …" />
+<meta name="keywords" content="pelican, blog, markdown, disqus, gravatar, github">
+<meta property="og:site_name" content="Tylor Allison"/>
+<meta property="og:title" content="Blogging Made Easy with Pelican and GitHub Pages"/>
+<meta property="og:description" content="Overview This post serves as a quick tutorial on setting up a web site using statically generated pages using Pelican for static site management, Markdown for page authoring, and GitHub Pages for hosting. These are all steps that I have used already to set up this site. The intent is …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://127.0.0.1:8000/blogging-made-easy-with-pelican-and-github-pages.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-01-29 00:00:00-08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://127.0.0.1:8000/author/tylor-allison.html">
+<meta property="article:section" content="tutorial"/>
+<meta property="article:tag" content="pelican"/>
+<meta property="article:tag" content="blog"/>
+<meta property="article:tag" content="markdown"/>
+<meta property="article:tag" content="disqus"/>
+<meta property="article:tag" content="gravatar"/>
+<meta property="article:tag" content="github"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/221e6e31de6232bf3175b820a4a961e7?s=120">
+
+  <title>Tylor Allison &ndash; Blogging Made Easy with Pelican and GitHub Pages</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://127.0.0.1:8000">
+        <img src="//s.gravatar.com/avatar/221e6e31de6232bf3175b820a4a961e7?s=120" alt="Tylor Allison" title="Tylor Allison">
+      </a>
+      <h1><a href="http://127.0.0.1:8000">Tylor Allison</a></h1>
+
+<p>GameDev Blog and Projects</p>
+
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/tylor-allison-423a6413" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/ptjal" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/TyAllison" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://127.0.0.1:8000">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="blogging-made-easy-with-pelican-and-github-pages">Blogging Made Easy with Pelican and GitHub Pages</h1>
+    <p>
+          Posted on Sun 29 January 2017 in <a href="http://127.0.0.1:8000/category/tutorial.html">tutorial</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <h3>Overview</h3>
+<p>This post serves as a quick tutorial on setting up a web site using statically generated pages using
+<a href="https://blog.getpelican.com/">Pelican</a> for static site management, <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> for page authoring, and <a href="https://pages.github.com/">GitHub Pages</a> for hosting.  These are all steps that I have used already to set up this site.  The intent is to have a web hosting solution that I can easily add content to without having to worry too much about fiddling with standard web development work and maintenance.  Oh, and all of this is free, so that is definitely a plus.</p>
+<h3>Pelican</h3>
+<p>Pelican is an actively maintained static site generator written in python.  The basic idea is that you
+use a site template that will apply a common theme across all of your content pages.  You write your content
+using Markdown, reStructuredText, or Ascii and Pelican is run to create an output folder which can then be used as your static site.</p>
+<p>Set up is really easy.  You can find more detailed instructions in <a href="http://docs.getpelican.com/en/stable/quickstart.html">Pelican's Quickstart Guide</a>, but it's so simple, I'll copy the steps below.</p>
+<h4>Installing Pelican and Markdown</h4>
+<p>If you don't already have python3 and pip installed on your system, check out <a href="https://www.python.org/downloads/">Python's Download Page</a> and <a href="https://pip.pypa.io/en/stable/installing/">pip's Install Page</a>.  The following documentation assumes you have both of these installed as well as git and a decent editor (I like <a href="https://atom.io/">Atom</a> but of course with my <a href="https://github.com/atom/vim-mode">vim-mode</a> enabled).</p>
+<div class="highlight"><pre><span></span>pip install pelican markdown
+</pre></div>
+
+
+<h4>Selecting a Theme</h4>
+<p>I already mentioned the concept of your site theme.  You can think of it as your web template that gets applied to all of your static content as well as creating the look and feel for you main page.  There are a good number of themes that are freely available through <a href="https://github.com/getpelican/pelican-themes">Pelican's Theme Repo</a> or other public repos if you dig around.  Some seem better than others.  Pelican has a <a href="http://www.pelicanthemes.com/">live theme site</a> where you can review the <em>official</em> themes.  I personally like, and am using <a href="https://github.com/alexandrevicenzi/Flex">Flex</a>.  If you don't like any of the options, you can always create your own.  They are Jinja templates and there are instructions <a href="http://docs.getpelican.com/en/stable/themes.html">here</a>.</p>
+<p>By default, when installing Pelican, you only get two themes: notmyidea and simple.  To use any other theme, you need to make pelican aware of that theme.  Easiest way to try different themes out is to pull down the entire pelican-themes repo, then use the <em>pelican-themes</em> command line tool to import your selected theme into pelican.</p>
+<div class="highlight"><pre><span></span><span class="k">cd</span> ~/repos
+git clone https://github.com/getpelican/pelican-themes.git
+pelican-themes -s ~/repos/pelican-themes/Flex
+</pre></div>
+
+
+<p>The above commands clone the pelican-themes repo into a subdirectory under ~/repos and then creates a symlink (instead of a full copy) of the Flex theme into Pelican's theme directory.  Replace "Flex" with whichever theme you select.</p>
+<h3>Building Your Site</h3>
+<p>The main concept that I am using to manage my site is to use a git repository for the static content pages, Pelican configuration, and related site content like images, etc.  Pelican makes this super simple to get started.  Simply create a new top-level directory for your web site, then run the <em>pelican-quickstart</em> on that directory.</p>
+<div class="highlight"><pre><span></span><span class="k">cd</span> ~/repos
+mkdir mysite
+pelican-quickstart -p mysite
+</pre></div>
+
+
+<p>The script will ask you some preliminary questions about your site. If you want to follow along
+with this guide, pay special attention to the questions I have highlighted below:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;</span> Do you want to specify a URL prefix? e.g., http://example.com   <span class="o">(</span>Y/n<span class="o">)</span>
+<span class="o">&gt;</span> What is your URL prefix? <span class="o">(</span>see above example<span class="p">;</span> no trailing slash<span class="o">)</span> http://ptjal.github.io
+<span class="o">&gt;</span> Do you want to generate a Fabfile/Makefile to automate generation <span class="k">and</span> publishing? <span class="o">(</span>Y/n<span class="o">)</span>
+<span class="o">&gt;</span> Do you want an auto-reload <span class="o">&amp;</span> simpleHTTP script to assist with theme <span class="k">and</span> site development? <span class="o">(</span>Y/n<span class="o">)</span>
+<span class="o">&gt;</span> Do you want to upload your website using GitHub Pages? <span class="o">(</span>y/N<span class="o">)</span> Y
+<span class="o">&gt;</span> Is this your personal page <span class="o">(</span>username.github.io<span class="o">)</span>? <span class="o">(</span>y/N<span class="o">)</span> Y
+</pre></div>
+
+
+<p>Change out the URL prefix to match your site.  After you have run this script, you should have a few artifacts in your site directory:</p>
+<ul>
+<li><em>content</em> -- This is the subdirectory where you will add all of your static content.</li>
+<li><em>output</em> -- This is the default subdirectory where your generated pages get put.</li>
+<li><em>pelicanconf.py</em> -- This is the main config file for your site.</li>
+<li><em>publishconf.py</em> --</li>
+<li><em>develop_server.sh</em> -- Super handy script that builds your site content and starts a simple web server locally.  This is great for reviewing your content before publishing.</li>
+</ul>
+<h3>Hosting</h3>
+<h3>Adding User Comment Support</h3>
+<h3>Personalizing using Gravatar and favicon.ico</h3>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://127.0.0.1:8000/tag/pelican.html">pelican</a>
+      <a href="http://127.0.0.1:8000/tag/blog.html">blog</a>
+      <a href="http://127.0.0.1:8000/tag/markdown.html">markdown</a>
+      <a href="http://127.0.0.1:8000/tag/disqus.html">disqus</a>
+      <a href="http://127.0.0.1:8000/tag/gravatar.html">gravatar</a>
+      <a href="http://127.0.0.1:8000/tag/github.html">github</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'tylorallisonblog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>&copy; Tylor Allison 2017</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Tylor Allison ",
+  "url" : "http://127.0.0.1:8000",
+  "image": "//s.gravatar.com/avatar/221e6e31de6232bf3175b820a4a961e7?s=120",
+  "description": ""
+}
+</script>
+</body>
+</html>
